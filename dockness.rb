@@ -1,34 +1,13 @@
-require "language/go"
 require "timeout"
 
 class Dockness < Formula
   desc "DNS for Docker machines"
   homepage "https://github.com/bamarni/dockness"
-  url "https://github.com/bamarni/dockness.git",
-      :tag => "v2.0.1",
-      :revision => "70d968325711e1fc3eecfbbf35cebf6be9a18a98"
-
-  head "https://github.com/bamarni/dockness.git"
-
-  depends_on "go" => :build
-  depends_on "docker-machine"
-
-  go_resource "github.com/docker/machine" do
-    url "https://github.com/docker/machine.git",
-    :revision => "ae9f392c10807c0a0792bc1821b3746570095be2"
-  end
-
-  go_resource "github.com/miekg/dns" do
-    url "https://github.com/miekg/dns.git",
-    :revision => "c9d1302d540edfb97d9ecbfe90b4fb515088630b"
-  end
+  url "https://github.com/bamarni/dockness/releases/download/v2.0.1/dockness-darwin-x64.tar.gz"
+  sha1 "ad4692e40bd237af17af440a84b27268e0d6ede7"
 
   def install
-    ENV["GOPATH"] = buildpath
-    ENV["GOOS"] = "darwin"
-    ENV["GOARCH"] = "amd64"
-    Language::Go.stage_deps resources, buildpath/"src"
-    system "go", "build", "-o", bin/"dockness"
+    bin.install "dockness"
   end
 
   def caveats; <<-EOS.undent
