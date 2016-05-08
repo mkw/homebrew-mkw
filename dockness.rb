@@ -10,6 +10,15 @@ class Dockness < Formula
 
   head "https://github.com/bamarni/dockness.git"
 
+  bottle do
+    root_url "https://github.com/mkw/homebrew-mkw/raw/bottles"
+    cellar :any
+    sha256 "57fd16024788c244670644bd26664f66a1e8365e155876a669529dd633833b65" => :el_capitan
+    # sha256 "X" => :yosemite
+    # sha256 "X" => :mavericks
+    # sha256 "X" => :mountain_lion
+  end
+
   depends_on "go" => :build
   depends_on "docker-machine"
 
