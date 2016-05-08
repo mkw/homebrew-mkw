@@ -1,0 +1,25 @@
+## Project
+
+# Personal notes
+NOTES.md
+
+# OS X Annoyance
+.DS_Store
+
+## JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/shelf
+.idea/xtextAutoBuilderState.xml
+# Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+# Gradle:
+.idea/gradle.xml
+.idea/libraries
