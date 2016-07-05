@@ -5,8 +5,8 @@ class Dockness < Formula
   desc "DNS for Docker machines"
   homepage "https://github.com/bamarni/dockness"
   url "https://github.com/bamarni/dockness.git",
-      :tag => "v2.0.1",
-      :revision => "70d968325711e1fc3eecfbbf35cebf6be9a18a98"
+      :tag => "v2.0.2",
+      :revision => "a05a71f0f1664a3c71853a3ed424d16dca8b1682"
 
   head "https://github.com/bamarni/dockness.git"
 
