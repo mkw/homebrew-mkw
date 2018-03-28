@@ -40,7 +40,7 @@ class Dockness < Formula
     system "go", "build", "-o", bin/"dockness"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Note: When using launchctl the top level domain will be
     "docker" and the listening port will be 10053.
 
@@ -59,7 +59,7 @@ class Dockness < Formula
 
   plist_options :manual => "dockness -port 10053 -tld docker"
 
-  def plist; <<-EOS.undent
+  def plist; <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
